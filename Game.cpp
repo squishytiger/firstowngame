@@ -3,14 +3,14 @@
 const float Game::player_speed = 500.f;
 const sf::Time Game::time_per_frame = sf::seconds(1.f / 100.f);
 
-Game::Game():
-    window(sf::VideoMode(640, 480), "first own game"),
-    player(),
-    background(),
-    moving_up(false),
-    moving_down(false),
-    moving_right(false),
-    moving_left(false)
+Game::Game()
+    : window(sf::VideoMode(640, 480), "first own game")
+    , player()
+    , background()
+    , moving_up(false)
+    , moving_down(false)
+    , moving_right(false)
+    , moving_left(false)
 {
     textures.load(Texture_id::Background, "media/textures/background.jpeg");
     textures.load(Texture_id::Player, "media/textures/player.png");
@@ -106,3 +106,4 @@ void Game::handle_key_pressed_released(sf::Keyboard::Key key, bool pressed)
             break;
     }
 }
+
